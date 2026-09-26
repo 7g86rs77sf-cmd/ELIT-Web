@@ -223,6 +223,10 @@ header p,
     display: inline-flex;
     align-items: center;
     justify-content: center;
+    
+    width: fit-content;
+    align-self: flex-start;
+    flex: none;
 
     margin: 0 0 24px 0;
     padding: 10px 16px;
