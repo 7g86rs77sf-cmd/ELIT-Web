@@ -300,9 +300,9 @@
             const matchingProducts =
                 data.products.filter(product =>
                     product.brand === selectedBrand &&
-                    product.year === selectedYear &&
-                    product.season === season
-                );
+                                     Number(product.year) === selectedYear
+                                     product.season === (season === "K" ? "WINTER" : "SUMMER")
+                                     );
 
 
             const categories =
