@@ -1,0 +1,617 @@
+{
+  "products": [
+    {
+      "code": "05PC25K100-P",
+      "brand": "Pierre Cardin",
+      "year": "2025",
+      "season": "WINTER",
+      "department": "WOMAN",
+      "category": "BAGS",
+      "colors": [
+        {
+          "code": "GCM",
+          "folder": "05PC25K100-P-GCM",
+          "cover": "05PC25K100-P-GCM-01.jpg",
+          "webCover": "images/05PC25K100-P_GCM_cover.jpg",
+          "photos": [
+            "05PC25K100-P-GCM-01.jpg",
+            "05PC25K100-P-GCM-02.jpg",
+            "05PC25K100-P-GCM-03.jpg",
+            "05PC25K100-P-GCM-04.jpg",
+            "05PC25K100-P-GCM-05.jpg",
+            "05PC25K100-P-GCM-06.jpg",
+            "05PC25K100-P-GCM-07.jpg"
+          ]
+        },
+        {
+          "code": "S",
+          "folder": "05PC25K100-P-S",
+          "cover": "05PC25K100-P-S-01.jpg",
+          "webCover": "images/05PC25K100-P_S_cover.jpg",
+          "photos": [
+            "05PC25K100-P-S-01.jpg",
+            "05PC25K100-P-S-02.jpg",
+            "05PC25K100-P-S-03.jpg",
+            "05PC25K100-P-S-04.jpg",
+            "05PC25K100-P-S-05.jpg",
+            "05PC25K100-P-S-06.jpg",
+            "05PC25K100-P-S-07.jpg",
+            "05PC25K100-P-S-08.jpg"
+          ]
+        },
+        {
+          "code": "VS",
+          "folder": "05PC25K100-P-VS",
+          "cover": "05PC25K100-P-VS-01.jpg",
+          "webCover": "images/05PC25K100-P_VS_cover.jpg",
+          "photos": [
+            "05PC25K100-P-VS-01.jpg",
+            "05PC25K100-P-VS-02.jpg",
+            "05PC25K100-P-VS-03.jpg",
+            "05PC25K100-P-VS-04.jpg",
+            "05PC25K100-P-VS-05.jpg",
+            "05PC25K100-P-VS-06.jpg",
+            "05PC25K100-P-VS-07.jpg"
+          ]
+        },
+        {
+          "code": "YSL",
+          "folder": "05PC25K100-P-YSL",
+          "cover": "05PC25K100-P-YSL-01.jpg",
+          "webCover": "images/05PC25K100-P_YSL_cover.jpg",
+          "photos": [
+            "05PC25K100-P-YSL-01.jpg",
+            "05PC25K100-P-YSL-02.jpg",
+            "05PC25K100-P-YSL-03.jpg",
+            "05PC25K100-P-YSL-04.jpg",
+            "05PC25K100-P-YSL-05.jpg",
+            "05PC25K100-P-YSL-06.jpg",
+            "05PC25K100-P-YSL-07.jpg"
+          ]
+        }
+      ]
+    },
+    {
+      "code": "05PC26K010081-P",
+      "brand": "Pierre Cardin",
+      "year": "2026",
+      "season": "WINTER",
+      "department": "WOMEN",
+      "category": "BAGS",
+      "colors": [
+        {
+          "code": "BJ",
+          "folder": "05PC26K010081-P-BJ",
+          "cover": "05PC26K010081P_BJ_04.jpg",
+          "webCover": "images/05PC26K010081-P_BJ_cover.jpg",
+          "photos": [
+            "05PC26K010081P_BJ_01.jpg",
+            "05PC26K010081P_BJ_02.jpg",
+            "05PC26K010081P_BJ_03.jpg",
+            "05PC26K010081P_BJ_04.jpg",
+            "05PC26K010081P_BJ_05.jpg",
+            "05PC26K010081P_BJ_06.jpg",
+            "05PC26K010081P_BJ_07.jpg"
+          ]
+        },
+        {
+          "code": "BY",
+          "folder": "05PC26K010081-P-BY",
+          "cover": "05PC26K010081P_BY_04.jpg",
+          "webCover": "images/05PC26K010081-P_BY_cover.jpg",
+          "photos": [
+            "05PC26K010081P_BY_01.jpg",
+            "05PC26K010081P_BY_02.jpg",
+            "05PC26K010081P_BY_03.jpg",
+            "05PC26K010081P_BY_04.jpg",
+            "05PC26K010081P_BY_05.jpg",
+            "05PC26K010081P_BY_06.jpg",
+            "05PC26K010081P_BY_07.jpg"
+          ]
+        },
+        {
+          "code": "CM",
+          "folder": "05PC26K010081-P-CM",
+          "cover": "05PC26K010081P_CM_04.jpg",
+          "webCover": "images/05PC26K010081-P_CM_cover.jpg",
+          "photos": [
+            "05PC26K010081P_CM_01.jpg",
+            "05PC26K010081P_CM_02.jpg",
+            "05PC26K010081P_CM_03.jpg",
+            "05PC26K010081P_CM_04.jpg",
+            "05PC26K010081P_CM_05.jpg",
+            "05PC26K010081P_CM_06.jpg",
+            "05PC26K010081P_CM_07.jpg"
+          ]
+        },
+        {
+          "code": "MNT",
+          "folder": "05PC26K010081-P-MNT",
+          "cover": "05PC26K010081P_MNT_04.jpg",
+          "webCover": "images/05PC26K010081-P_MNT_cover.jpg",
+          "photos": [
+            "05PC26K010081P_MNT_01.jpg",
+            "05PC26K010081P_MNT_02.jpg",
+            "05PC26K010081P_MNT_03.jpg",
+            "05PC26K010081P_MNT_04.jpg",
+            "05PC26K010081P_MNT_05.jpg",
+            "05PC26K010081P_MNT_06.jpg",
+            "05PC26K010081P_MNT_07.jpg"
+          ]
+        },
+        {
+          "code": "S",
+          "folder": "05PC26K010081-P-S",
+          "cover": "05PC26K010081P_S_04.jpg",
+          "webCover": "images/05PC26K010081-P_S_cover.jpg",
+          "photos": [
+            "05PC26K010081P_S_01.jpg",
+            "05PC26K010081P_S_02.jpg",
+            "05PC26K010081P_S_03.jpg",
+            "05PC26K010081P_S_04.jpg",
+            "05PC26K010081P_S_05.jpg",
+            "05PC26K010081P_S_06.jpg",
+            "05PC26K010081P_S_07.jpg"
+          ]
+        }
+      ]
+    },
+    {
+      "code": "05PC26K10225-MN",
+      "brand": "Pierre Cardin",
+      "year": "2026",
+      "season": "WINTER",
+      "department": "WOMEN",
+      "category": "BAGS",
+      "colors": [
+        {
+          "code": "A",
+          "folder": "05PC26K10225-MN-A",
+          "cover": "05PC26K10225-MN-A-01.jpg",
+          "webCover": "images/05PC26K10225-MN_A_cover.jpg",
+          "photos": [
+            "05PC26K10225-MN-A-01.jpg",
+            "05PC26K10225-MN-A-02.jpg",
+            "05PC26K10225-MN-A-03.jpg",
+            "05PC26K10225-MN-A-04.jpg",
+            "05PC26K10225-MN-A-05.jpg",
+            "05PC26K10225-MN-A-06.jpg",
+            "05PC26K10225-MN-A-07.jpg"
+          ]
+        },
+        {
+          "code": "BJ",
+          "folder": "05PC26K10225-MN-BJ",
+          "cover": "05PC26K10225-MN-BJ-01.jpg",
+          "webCover": "images/05PC26K10225-MN_BJ_cover.jpg",
+          "photos": [
+            "05PC26K10225-MN-BJ-01.jpg",
+            "05PC26K10225-MN-BJ-02.jpg",
+            "05PC26K10225-MN-BJ-03.jpg",
+            "05PC26K10225-MN-BJ-04.jpg",
+            "05PC26K10225-MN-BJ-05.jpg",
+            "05PC26K10225-MN-BJ-06.jpg",
+            "05PC26K10225-MN-BJ-07.jpg"
+          ]
+        },
+        {
+          "code": "BY",
+          "folder": "05PC26K10225-MN-BY",
+          "cover": "05PC26K10225-MN-BY-01.jpg",
+          "webCover": "images/05PC26K10225-MN_BY_cover.jpg",
+          "photos": [
+            "05PC26K10225-MN-BY-01.jpg",
+            "05PC26K10225-MN-BY-02.jpg",
+            "05PC26K10225-MN-BY-03.jpg",
+            "05PC26K10225-MN-BY-04.jpg",
+            "05PC26K10225-MN-BY-05.jpg",
+            "05PC26K10225-MN-BY-06.jpg",
+            "05PC26K10225-MN-BY-07.jpg"
+          ]
+        },
+        {
+          "code": "KH",
+          "folder": "05PC26K10225-MN-KH",
+          "cover": "05PC26K10225-MN-KH-01.jpg",
+          "webCover": "images/05PC26K10225-MN_KH_cover.jpg",
+          "photos": [
+            "05PC26K10225-MN-KH-01.jpg",
+            "05PC26K10225-MN-KH-02.jpg",
+            "05PC26K10225-MN-KH-03.jpg",
+            "05PC26K10225-MN-KH-04.jpg",
+            "05PC26K10225-MN-KH-05.jpg",
+            "05PC26K10225-MN-KH-06.jpg",
+            "05PC26K10225-MN-KH-07.jpg"
+          ]
+        },
+        {
+          "code": "S",
+          "folder": "05PC26K10225-MN-S",
+          "cover": "05PC26K10225-MN-S-01.jpg",
+          "webCover": "images/05PC26K10225-MN_S_cover.jpg",
+          "photos": [
+            "05PC26K10225-MN-S-01.jpg",
+            "05PC26K10225-MN-S-02.jpg",
+            "05PC26K10225-MN-S-03.jpg",
+            "05PC26K10225-MN-S-04.jpg",
+            "05PC26K10225-MN-S-05.jpg",
+            "05PC26K10225-MN-S-06.jpg",
+            "05PC26K10225-MN-S-07.jpg"
+          ]
+        }
+      ]
+    },
+    {
+      "code": "05PC26K10240-MN",
+      "brand": "Pierre Cardin",
+      "year": "2026",
+      "season": "WINTER",
+      "department": "WOMEN",
+      "category": "BAGS",
+      "colors": [
+        {
+          "code": "A",
+          "folder": "05PC26K10240-MN-A",
+          "cover": "05PC26K10240-MN-A-01.jpg",
+          "webCover": "images/05PC26K10240-MN_A_cover.jpg",
+          "photos": [
+            "05PC26K10240-MN-A-01.jpg",
+            "05PC26K10240-MN-A-02.jpg",
+            "05PC26K10240-MN-A-03.jpg",
+            "05PC26K10240-MN-A-04.jpg",
+            "05PC26K10240-MN-A-05.jpg",
+            "05PC26K10240-MN-A-06.jpg",
+            "05PC26K10240-MN-A-07.jpg"
+          ]
+        },
+        {
+          "code": "BJ",
+          "folder": "05PC26K10240-MN-BJ",
+          "cover": "05PC26K10240-MN-BJ-01.jpg",
+          "webCover": "images/05PC26K10240-MN_BJ_cover.jpg",
+          "photos": [
+            "05PC26K10240-MN-BJ-01.jpg",
+            "05PC26K10240-MN-BJ-02.jpg",
+            "05PC26K10240-MN-BJ-03.jpg",
+            "05PC26K10240-MN-BJ-04.jpg",
+            "05PC26K10240-MN-BJ-05.jpg",
+            "05PC26K10240-MN-BJ-06.jpg",
+            "05PC26K10240-MN-BJ-07.jpg"
+          ]
+        },
+        {
+          "code": "BY",
+          "folder": "05PC26K10240-MN-BY",
+          "cover": "05PC26K10240-MN-BY-01.jpg",
+          "webCover": "images/05PC26K10240-MN_BY_cover.jpg",
+          "photos": [
+            "05PC26K10240-MN-BY-01.jpg",
+            "05PC26K10240-MN-BY-02.jpg",
+            "05PC26K10240-MN-BY-03.jpg",
+            "05PC26K10240-MN-BY-04.jpg",
+            "05PC26K10240-MN-BY-05.jpg",
+            "05PC26K10240-MN-BY-06.jpg",
+            "05PC26K10240-MN-BY-07.jpg"
+          ]
+        },
+        {
+          "code": "KH",
+          "folder": "05PC26K10240-MN-KH",
+          "cover": "05PC26K10240-MN-KH-01.jpg",
+          "webCover": "images/05PC26K10240-MN_KH_cover.jpg",
+          "photos": [
+            "05PC26K10240-MN-KH-01.jpg",
+            "05PC26K10240-MN-KH-02.jpg",
+            "05PC26K10240-MN-KH-03.jpg",
+            "05PC26K10240-MN-KH-04.jpg",
+            "05PC26K10240-MN-KH-05.jpg",
+            "05PC26K10240-MN-KH-06.jpg",
+            "05PC26K10240-MN-KH-07.jpg"
+          ]
+        },
+        {
+          "code": "S",
+          "folder": "05PC26K10240-MN-S",
+          "cover": "05PC26K10240-MN-S-01.jpg",
+          "webCover": "images/05PC26K10240-MN_S_cover.jpg",
+          "photos": [
+            "05PC26K10240-MN-S-01.jpg",
+            "05PC26K10240-MN-S-02.jpg",
+            "05PC26K10240-MN-S-03.jpg",
+            "05PC26K10240-MN-S-04.jpg",
+            "05PC26K10240-MN-S-05.jpg",
+            "05PC26K10240-MN-S-06.jpg",
+            "05PC26K10240-MN-S-07.jpg"
+          ]
+        }
+      ]
+    },
+    {
+      "code": "05PC26K10240-PRG",
+      "brand": "Pierre Cardin",
+      "year": "2026",
+      "season": "WINTER",
+      "department": "WOMEN",
+      "category": "BAGS",
+      "colors": [
+        {
+          "code": "BJ",
+          "folder": "05PC26K10240-PRG-BJ",
+          "cover": "05PC26K10240-PRG-BJ-01.jpg",
+          "webCover": "images/05PC26K10240-PRG_BJ_cover.jpg",
+          "photos": [
+            "05PC26K10240-PRG-BJ-01.jpg",
+            "05PC26K10240-PRG-BJ-02.jpg",
+            "05PC26K10240-PRG-BJ-03.jpg",
+            "05PC26K10240-PRG-BJ-04.jpg",
+            "05PC26K10240-PRG-BJ-05.jpg"
+          ]
+        },
+        {
+          "code": "BY",
+          "folder": "05PC26K10240-PRG-BY",
+          "cover": "05PC26K10240-PRG-BY-01.jpg",
+          "webCover": "images/05PC26K10240-PRG_BY_cover.jpg",
+          "photos": [
+            "05PC26K10240-PRG-BY-01.jpg",
+            "05PC26K10240-PRG-BY-02.jpg",
+            "05PC26K10240-PRG-BY-03.jpg",
+            "05PC26K10240-PRG-BY-04.jpg",
+            "05PC26K10240-PRG-BY-05.jpg"
+          ]
+        },
+        {
+          "code": "S",
+          "folder": "05PC26K10240-PRG-S",
+          "cover": "05PC26K10240-PRG-S-01.jpg",
+          "webCover": "images/05PC26K10240-PRG_S_cover.jpg",
+          "photos": [
+            "05PC26K10240-PRG-S-01.jpg",
+            "05PC26K10240-PRG-S-02.jpg",
+            "05PC26K10240-PRG-S-03.jpg",
+            "05PC26K10240-PRG-S-04.jpg",
+            "05PC26K10240-PRG-S-05.jpg",
+            "05PC26K10240-PRG-S-06.jpg",
+            "05PC26K10240-PRG-S-07.jpg"
+          ]
+        }
+      ]
+    },
+    {
+      "code": "05PC26K10358-MN",
+      "brand": "Pierre Cardin",
+      "year": "2026",
+      "season": "WINTER",
+      "department": "WOMEN",
+      "category": "BAGS",
+      "colors": [
+        {
+          "code": "A",
+          "folder": "05PC26K10358-MN-A",
+          "cover": "05PC26K10358-MN-A-01.jpg",
+          "webCover": "images/05PC26K10358-MN_A_cover.jpg",
+          "photos": [
+            "05PC26K10358-MN-A-01.jpg",
+            "05PC26K10358-MN-A-02.jpg",
+            "05PC26K10358-MN-A-03.jpg",
+            "05PC26K10358-MN-A-04.jpg",
+            "05PC26K10358-MN-A-05.jpg"
+          ]
+        },
+        {
+          "code": "KH",
+          "folder": "05PC26K10358-MN-KH",
+          "cover": "05PC26K10358-MN-KH-01.jpg",
+          "webCover": "images/05PC26K10358-MN_KH_cover.jpg",
+          "photos": [
+            "05PC26K10358-MN-KH-01.jpg",
+            "05PC26K10358-MN-KH-02.jpg",
+            "05PC26K10358-MN-KH-03.jpg",
+            "05PC26K10358-MN-KH-04.jpg",
+            "05PC26K10358-MN-KH-05.jpg",
+            "05PC26K10358-MN-KH-06.jpg",
+            "05PC26K10358-MN-KH-07.jpg"
+          ]
+        },
+        {
+          "code": "S",
+          "folder": "05PC26K10358-MN-S",
+          "cover": "05PC26K10358-MN-S-01.jpg",
+          "webCover": "images/05PC26K10358-MN_S_cover.jpg",
+          "photos": [
+            "05PC26K10358-MN-S-01.jpg",
+            "05PC26K10358-MN-S-02.jpg",
+            "05PC26K10358-MN-S-03.jpg",
+            "05PC26K10358-MN-S-04.jpg",
+            "05PC26K10358-MN-S-05.jpg",
+            "05PC26K10358-MN-S-06.jpg",
+            "05PC26K10358-MN-S-07.jpg"
+          ]
+        },
+        {
+          "code": "TS",
+          "folder": "05PC26K10358-MN-TS",
+          "cover": "05PC26K10358-MN-TS-01.jpg",
+          "webCover": "images/05PC26K10358-MN_TS_cover.jpg",
+          "photos": [
+            "05PC26K10358-MN-TS-01.jpg",
+            "05PC26K10358-MN-TS-02.jpg",
+            "05PC26K10358-MN-TS-03.jpg",
+            "05PC26K10358-MN-TS-04.jpg",
+            "05PC26K10358-MN-TS-05.jpg",
+            "05PC26K10358-MN-TS-06.jpg",
+            "05PC26K10358-MN-TS-07.jpg",
+            "05PC26K10358-MN-TS-08.jpg"
+          ]
+        }
+      ]
+    },
+    {
+      "code": "05PC26K10374-MN",
+      "brand": "Pierre Cardin",
+      "year": "2026",
+      "season": "WINTER",
+      "department": "WOMEN",
+      "category": "BAGS",
+      "colors": [
+        {
+          "code": "A",
+          "folder": "05PC26K10374-MN-A",
+          "cover": "05PC26K10374-MN-A-01.jpg",
+          "webCover": "images/05PC26K10374-MN_A_cover.jpg",
+          "photos": [
+            "05PC26K10374-MN-A-01.jpg",
+            "05PC26K10374-MN-A-02.jpg",
+            "05PC26K10374-MN-A-03.jpg",
+            "05PC26K10374-MN-A-04.jpg",
+            "05PC26K10374-MN-A-05.jpg",
+            "05PC26K10374-MN-A-06.jpg",
+            "05PC26K10374-MN-A-07.jpg"
+          ]
+        },
+        {
+          "code": "BJ",
+          "folder": "05PC26K10374-MN-BJ",
+          "cover": "05PC26K10374-MN-BJ-01.jpg",
+          "webCover": "images/05PC26K10374-MN_BJ_cover.jpg",
+          "photos": [
+            "05PC26K10374-MN-BJ-01.jpg",
+            "05PC26K10374-MN-BJ-02.jpg",
+            "05PC26K10374-MN-BJ-03.jpg",
+            "05PC26K10374-MN-BJ-04.jpg",
+            "05PC26K10374-MN-BJ-05.jpg",
+            "05PC26K10374-MN-BJ-06.jpg",
+            "05PC26K10374-MN-BJ-07.jpg"
+          ]
+        },
+        {
+          "code": "BY",
+          "folder": "05PC26K10374-MN-BY",
+          "cover": "05PC26K10374-MN-BY-01.jpg",
+          "webCover": "images/05PC26K10374-MN_BY_cover.jpg",
+          "photos": [
+            "05PC26K10374-MN-BY-01.jpg",
+            "05PC26K10374-MN-BY-02.jpg",
+            "05PC26K10374-MN-BY-03.jpg",
+            "05PC26K10374-MN-BY-04.jpg",
+            "05PC26K10374-MN-BY-05.jpg",
+            "05PC26K10374-MN-BY-06.jpg",
+            "05PC26K10374-MN-BY-07.jpg"
+          ]
+        },
+        {
+          "code": "KH",
+          "folder": "05PC26K10374-MN-KH",
+          "cover": "05PC26K10374-MN-KH-01.jpg",
+          "webCover": "images/05PC26K10374-MN_KH_cover.jpg",
+          "photos": [
+            "05PC26K10374-MN-KH-01.jpg",
+            "05PC26K10374-MN-KH-02.jpg",
+            "05PC26K10374-MN-KH-03.jpg",
+            "05PC26K10374-MN-KH-04.jpg",
+            "05PC26K10374-MN-KH-05.jpg",
+            "05PC26K10374-MN-KH-06.jpg",
+            "05PC26K10374-MN-KH-07.jpg"
+          ]
+        },
+        {
+          "code": "S",
+          "folder": "05PC26K10374-MN-S",
+          "cover": "05PC26K10374-MN-S-01.jpg",
+          "webCover": "images/05PC26K10374-MN_S_cover.jpg",
+          "photos": [
+            "05PC26K10374-MN-S-01.jpg",
+            "05PC26K10374-MN-S-02.jpg",
+            "05PC26K10374-MN-S-03.jpg",
+            "05PC26K10374-MN-S-04.jpg",
+            "05PC26K10374-MN-S-05.jpg",
+            "05PC26K10374-MN-S-06.jpg",
+            "05PC26K10374-MN-S-07.jpg"
+          ]
+        }
+      ]
+    },
+    {
+      "code": "06PC26K0300-MN",
+      "brand": "Pierre Cardin",
+      "year": "2026",
+      "season": "WINTER",
+      "department": "WOMEN",
+      "category": "WALLETS",
+      "colors": [
+        {
+          "code": "A",
+          "folder": "06PC26K0300-MN-A",
+          "cover": "06PC26K0300-MN-A-01.jpg",
+          "webCover": "images/06PC26K0300-MN_A_cover.jpg",
+          "photos": [
+            "06PC26K0300-MN-A-01.jpg",
+            "06PC26K0300-MN-A-02.jpg",
+            "06PC26K0300-MN-A-03.jpg",
+            "06PC26K0300-MN-A-04.jpg",
+            "06PC26K0300-MN-A-05.jpg",
+            "06PC26K0300-MN-A-06.jpg",
+            "06PC26K0300-MN-A-07.jpg"
+          ]
+        },
+        {
+          "code": "BJ",
+          "folder": "06PC26K0300-MN-BJ",
+          "cover": "06PC26K0300-MN-BJ-01.jpg",
+          "webCover": "images/06PC26K0300-MN_BJ_cover.jpg",
+          "photos": [
+            "06PC26K0300-MN-BJ-01.jpg",
+            "06PC26K0300-MN-BJ-02.jpg",
+            "06PC26K0300-MN-BJ-03.jpg",
+            "06PC26K0300-MN-BJ-04.jpg",
+            "06PC26K0300-MN-BJ-05.jpg",
+            "06PC26K0300-MN-BJ-06.jpg",
+            "06PC26K0300-MN-BJ-07.jpg"
+          ]
+        },
+        {
+          "code": "BY",
+          "folder": "06PC26K0300-MN-BY",
+          "cover": "06PC26K0300-MN-BY-01.jpg",
+          "webCover": "images/06PC26K0300-MN_BY_cover.jpg",
+          "photos": [
+            "06PC26K0300-MN-BY-01.jpg",
+            "06PC26K0300-MN-BY-02.jpg",
+            "06PC26K0300-MN-BY-03.jpg",
+            "06PC26K0300-MN-BY-04.jpg",
+            "06PC26K0300-MN-BY-05.jpg",
+            "06PC26K0300-MN-BY-06.jpg"
+          ]
+        },
+        {
+          "code": "KH",
+          "folder": "06PC26K0300-MN-KH",
+          "cover": "06PC26K0300-MN-KH-01.jpg",
+          "webCover": "images/06PC26K0300-MN_KH_cover.jpg",
+          "photos": [
+            "06PC26K0300-MN-KH-01.jpg",
+            "06PC26K0300-MN-KH-02.jpg",
+            "06PC26K0300-MN-KH-03.jpg",
+            "06PC26K0300-MN-KH-04.jpg",
+            "06PC26K0300-MN-KH-05.jpg",
+            "06PC26K0300-MN-KH-06.jpg"
+          ]
+        },
+        {
+          "code": "S",
+          "folder": "06PC26K0300-MN-S",
+          "cover": "06PC26K0300-MN-S-01.jpg",
+          "webCover": "images/06PC26K0300-MN_S_cover.jpg",
+          "photos": [
+            "06PC26K0300-MN-S-01.jpg",
+            "06PC26K0300-MN-S-02.jpg",
+            "06PC26K0300-MN-S-03.jpg",
+            "06PC26K0300-MN-S-04.jpg",
+            "06PC26K0300-MN-S-05.jpg",
+            "06PC26K0300-MN-S-06.jpg"
+          ]
+        }
+      ]
+    }
+  ]
+}

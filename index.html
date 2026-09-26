@@ -276,7 +276,7 @@
 
 
             const response =
-                await fetch("products.json");
+                await fetch("catalogue-generated.json");
 
             const data =
                 await response.json();
@@ -362,7 +362,7 @@
 
 
             const response =
-                await fetch("products.json");
+                await fetch("catalogue-generated.json");
 
             const data =
                 await response.json();
@@ -389,19 +389,20 @@
                     .getElementById("selected-season")
                     .textContent;
 
-            const selectedSeason =
-                selectedSeasonText.includes("Winter")
-                    ? "K"
-                    : "Y";
+                    const selectedSeason =
+                        selectedSeasonText.includes("Winter")
+                            ? "WINTER"
+                            : "SUMMER";
 
 
-            const matchingProducts =
-                data.products.filter(product =>
-                    product.brand === selectedBrand &&
-                    product.year === selectedYear &&
-                    product.season === selectedSeason &&
-                    product.category === category
-                );
+                            const matchingProducts =
+                                data.products.filter(product =>
+                                    product.brand === selectedBrand &&
+                                    Number(product.year) === selectedYear &&
+                                    product.season === selectedSeason &&
+                                    product.department === "WOMEN" &&
+                                    product.category === "BAGS"
+                                );
 
 
             const productList =
@@ -417,14 +418,22 @@
 
                 card.className = "product-card";
 
+                const cover =
+                    product.colors.length > 0
+                        ? product.colors[0].webCover
+                        : null;
+
                 card.innerHTML = `
                     <div class="product-image-placeholder">
-                        Photo
+                        ${
+                            cover
+                                ? `<img src="${cover}" alt="${product.code}">`
+                                : "No Photo"
+                        }
                     </div>
 
                     <div class="product-card-info">
                         <strong>${product.code}</strong>
-                        <span>${product.type}</span>
                     </div>
                 `;
 
