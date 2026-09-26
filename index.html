@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ELİT Catalogue</title>
+</head>
+
+<body>
+
+    <h1>ELİT</h1>
+    <h2>Catalogue</h2>
+
+    <div id="catalogue">
+        Loading catalogue...
+    </div>
+
+    <script>
+        fetch("products.json")
+            .then(response => response.json())
+            .then(data => {
+
+                const catalogue = document.getElementById("catalogue");
+                catalogue.innerHTML = "";
+
+                data.products.forEach(product => {
+
+                    catalogue.innerHTML += `
+                        <hr>
+                        <h2>${product.brand}</h2>
+                        <h3>${product.code}</h3>
+
+                        <p>${product.type}</p>
+                        <p>${product.category}</p>
+                        <p>Year: ${product.year}</p>
+                        <p>Season: ${product.season}</p>
+                        <p>Made in ${product.madeIn}</p>
+                        <p>Vegan: ${product.vegan ? "Yes" : "No"}</p>
+                        <p>Colors: ${product.colors.join(", ")}</p>
+                    `;
+                });
+            })
+            .catch(error => {
+                document.getElementById("catalogue").innerHTML =
+                    "Catalogue couldn't be loaded.";
+                console.error(error);
+            });
+    </script>
+
+</body>
+</html>

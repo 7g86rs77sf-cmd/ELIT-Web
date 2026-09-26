@@ -1,0 +1,21 @@
+{
+  "products": [
+    {
+      "code": "05PC26K010081-P",
+      "brand": "Pierre Cardin",
+      "year": 2026,
+      "season": "K",
+      "category": "Women Bags",
+      "type": "Shoulder Bag",
+      "madeIn": "Turkey",
+      "vegan": true,
+      "colors": [
+        "BJ",
+        "BY",
+        "CM",
+        "MNT",
+        "S"
+      ]
+    }
+  ]
+}
