@@ -217,3 +217,32 @@ header p,
     object-fit: cover;
     display: block;
 }
+/* BACK BUTTON */
+
+.back-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    margin: 0 0 24px 0;
+    padding: 10px 16px;
+
+    background: #1c1c1e;
+    color: #eeeeee;
+
+    border: 1px solid #333333;
+    border-radius: 10px;
+
+    font: inherit;
+    font-size: 14px;
+
+    cursor: pointer;
+}
+
+.back-button:hover {
+    background: #2c2c2e;
+}
+
+.back-button:active {
+    transform: scale(0.97);
+}
