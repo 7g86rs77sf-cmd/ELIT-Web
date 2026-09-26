@@ -164,6 +164,26 @@
 
         </section>
         
+        <!-- DYNAMIC CATALOGUE LEVEL -->
+
+        <section id="catalogue-level" class="hidden">
+
+            <button class="back-button"
+                    onclick="goBackCatalogueLevel()">
+                ← Back
+            </button>
+
+            <div class="selection-header">
+                <p id="catalogue-path"></p>
+                <h2 id="catalogue-level-title">Catalogue</h2>
+            </div>
+
+            <div id="catalogue-level-list"
+                 class="year-list">
+            </div>
+
+        </section>
+        
         <!-- PRODUCTS -->
 
         <section id="products" class="hidden">
@@ -220,6 +240,38 @@
 
         /* NAVIGATION */
 
+        let catalogueData = null;
+
+        let currentBrand = null;
+        let currentYear = null;
+        let currentSeason = null;
+        let currentPath = [];
+
+
+        /* -------------------------
+           LOAD CATALOGUE
+        ------------------------- */
+
+        async function loadCatalogue() {
+
+            if (catalogueData) {
+                return catalogueData;
+            }
+
+            const response =
+                await fetch("catalogue-generated.json");
+
+            catalogueData =
+                await response.json();
+
+            return catalogueData;
+        }
+
+
+        /* -------------------------
+           BRAND
+        ------------------------- */
+
         function openBrand(brand) {
 
             document
@@ -229,6 +281,8 @@
             document
                 .getElementById("years")
                 .classList.remove("hidden");
+
+            currentBrand = brand;
 
             document
                 .getElementById("selected-brand")
@@ -246,7 +300,12 @@
                 .getElementById("brands")
                 .classList.remove("hidden");
         }
-        
+
+
+        /* -------------------------
+           YEAR
+        ------------------------- */
+
         function openYear(year) {
 
             document
@@ -257,11 +316,12 @@
                 .getElementById("seasons")
                 .classList.remove("hidden");
 
+            currentYear = Number(year);
+
             document
                 .getElementById("selected-year")
                 .textContent =
-                document.getElementById("selected-brand").textContent
-                + " • " + year;
+                currentBrand + " • " + year;
         }
 
 
@@ -275,263 +335,227 @@
                 .getElementById("years")
                 .classList.remove("hidden");
         }
+
+
+        /* -------------------------
+           SEASON
+        ------------------------- */
+
         async function openSeason(season) {
 
+            currentSeason =
+                season === "K"
+                    ? "WINTER"
+                    : "SUMMER";
+
+            currentPath = [];
+
             document
                 .getElementById("seasons")
                 .classList.add("hidden");
 
             document
-                .getElementById("departments")
+                .getElementById("catalogue-level")
                 .classList.remove("hidden");
 
-            const seasonName =
-                season === "K" ? "Winter" : "Summer";
+            await openCatalogueLevel();
+        }
+
+
+        /* -------------------------
+           DYNAMIC LEVEL
+        ------------------------- */
+
+        async function openCatalogueLevel() {
+
+            const data =
+                await loadCatalogue();
+
+            const matchingProducts =
+                data.products.filter(product => {
+
+                    if (
+                        product.brand !== currentBrand ||
+                        Number(product.year) !== currentYear ||
+                        product.season !== currentSeason
+                    ) {
+                        return false;
+                    }
+
+                    for (
+                        let i = 0;
+                        i < currentPath.length;
+                        i++
+                    ) {
+
+                        if (
+                            !product.path ||
+                            product.path[i] !== currentPath[i]
+                        ) {
+                            return false;
+                        }
+                    }
+
+                    return true;
+                });
+
+
+            const nextFolders =
+                [...new Set(
+                    matchingProducts
+                        .filter(product =>
+                            product.path &&
+                            product.path.length >
+                            currentPath.length
+                        )
+                        .map(product =>
+                            product.path[
+                                currentPath.length
+                            ]
+                        )
+                )];
+
 
             document
-                .getElementById("selected-department-path")
+                .getElementById("catalogue-path")
                 .textContent =
-                document.getElementById("selected-year").textContent
-                + " • " + seasonName;
+                [
+                    currentBrand,
+                    currentYear,
+                    currentSeason,
+                    ...currentPath
+                ].join(" • ");
 
-            const response =
-                await fetch("catalogue-generated.json");
 
-            const data =
-                await response.json();
+            const list =
+                document.getElementById(
+                    "catalogue-level-list"
+                );
 
-            const selectedBrand =
+            list.innerHTML = "";
+
+
+            /* THERE ARE MORE FOLDERS */
+
+            if (nextFolders.length > 0) {
+
                 document
-                    .getElementById("selected-brand")
-                    .textContent;
-
-            const selectedYear =
-                Number(
-                    document
-                        .getElementById("selected-year")
-                        .textContent
-                        .split(" • ")
-                        .pop()
-                );
-
-            const selectedSeason =
-                season === "K" ? "WINTER" : "SUMMER";
-
-            const matchingProducts =
-                data.products.filter(product =>
-                    product.brand === selectedBrand &&
-                    Number(product.year) === selectedYear &&
-                    product.season === selectedSeason
-                );
-
-            const departments =
-                [...new Set(
-                    matchingProducts.map(
-                        product => product.department
+                    .getElementById(
+                        "catalogue-level-title"
                     )
-                )];
+                    .textContent = "Select";
 
-            const departmentList =
-                document.getElementById("department-list");
+                nextFolders.forEach(folder => {
 
-            departmentList.innerHTML = "";
+                    const button =
+                        document.createElement(
+                            "button"
+                        );
 
-            departments.forEach(department => {
+                    button.className =
+                        "year-card";
 
-                const button =
-                    document.createElement("button");
+                    button.textContent =
+                        folder;
 
-                button.className = "year-card";
-                button.textContent = department;
+                    button.onclick = () => {
 
-                button.onclick =
-                    () => openDepartment(
-                        department,
-                        selectedSeason
-                    );
+                        currentPath.push(folder);
 
-                departmentList.appendChild(button);
-            });
-        }
-        async function openDepartment(department, season) {
+                        openCatalogueLevel();
+                    };
 
-            document
-                .getElementById("departments")
-                .classList.add("hidden");
+                    list.appendChild(button);
+                });
 
-            document
-                .getElementById("categories")
-                .classList.remove("hidden");
+                return;
+            }
 
-            document
-                .getElementById("selected-season")
-                .textContent = department;
 
-            const response =
-                await fetch("catalogue-generated.json");
+            /* NO MORE FOLDERS:
+               SHOW PRODUCTS */
 
-            const data =
-                await response.json();
-
-            const selectedBrand =
-                document
-                    .getElementById("selected-brand")
-                    .textContent;
-
-            const selectedYear =
-                Number(
-                    document
-                        .getElementById("selected-year")
-                        .textContent
-                        .split(" • ")
-                        .pop()
-                );
-
-            const matchingProducts =
-                data.products.filter(product =>
-                    product.brand === selectedBrand &&
-                    Number(product.year) === selectedYear &&
-                    product.season === season &&
-                    product.department === department
-                );
-
-            const categories =
-                [...new Set(
-                    matchingProducts.map(
-                        product => product.category
-                    )
-                )];
-
-            const categoryList =
-                document.getElementById("category-list");
-
-            categoryList.innerHTML = "";
-
-            categories.forEach(category => {
-
-                const button =
-                    document.createElement("button");
-
-                button.className = "year-card";
-                button.textContent = category;
-
-                button.onclick =
-                    () => openCategory(
-                        category,
-                        department,
-                        season
-                    );
-
-                categoryList.appendChild(button);
-            });
+            showProducts(matchingProducts);
         }
 
-        function showSeasons() {
+
+        /* -------------------------
+           PRODUCTS
+        ------------------------- */
+
+        function showProducts(products) {
 
             document
-                .getElementById("categories")
-                .classList.add("hidden");
-
-            document
-                .getElementById("seasons")
-                .classList.remove("hidden");
-        }
-        async function openCategory(category) {
-
-            document
-                .getElementById("categories")
+                .getElementById("catalogue-level")
                 .classList.add("hidden");
 
             document
                 .getElementById("products")
                 .classList.remove("hidden");
 
-
             document
                 .getElementById("selected-category")
-                .textContent = category;
-
-
-            const response =
-                await fetch("catalogue-generated.json");
-
-            const data =
-                await response.json();
-
-
-            const selectedBrand =
-                document
-                    .getElementById("selected-brand")
-                    .textContent;
-
-
-            const selectedYear =
-                Number(
-                    document
-                        .getElementById("selected-year")
-                        .textContent
-                        .split(" • ")
-                        .pop()
-                );
-
-
-            const selectedSeasonText =
-                document
-                    .getElementById("selected-season")
-                    .textContent;
-
-                    const selectedSeason =
-                        selectedSeasonText.includes("Winter")
-                            ? "WINTER"
-                            : "SUMMER";
-
-
-                            const matchingProducts =
-                                data.products.filter(product =>
-                                    product.brand === selectedBrand &&
-                                    Number(product.year) === selectedYear &&
-                                    product.season === selectedSeason &&
-                                    product.department === "WOMEN" &&
-                                    product.category === "BAGS"
-                                );
+                .textContent =
+                currentPath.length > 0
+                    ? currentPath[
+                        currentPath.length - 1
+                    ]
+                    : currentSeason;
 
 
             const productList =
-                document.getElementById("product-list");
+                document.getElementById(
+                    "product-list"
+                );
 
             productList.innerHTML = "";
 
 
-            matchingProducts.forEach(product => {
+            products.forEach(product => {
 
                 const card =
-                    document.createElement("button");
+                    document.createElement(
+                        "button"
+                    );
 
-                card.className = "product-card";
+                card.className =
+                    "product-card";
+
 
                 const cover =
                     product.colors.length > 0
                         ? product.colors[0].webCover
                         : null;
 
+
                 card.innerHTML = `
                     <div class="product-image-placeholder">
+
                         ${
                             cover
-                                ? `<img src="${cover}" alt="${product.code}">`
+                                ? `<img src="${cover}"
+                                        alt="${product.code}">`
                                 : "No Photo"
                         }
+
                     </div>
 
                     <div class="product-card-info">
-                        <strong>${product.code}</strong>
+                        <strong>
+                            ${product.code}
+                        </strong>
                     </div>
                 `;
+
 
                 productList.appendChild(card);
             });
         }
 
+
+        /* -------------------------
+           BACK FROM PRODUCTS
+        ------------------------- */
 
         function showCategories() {
 
@@ -540,20 +564,37 @@
                 .classList.add("hidden");
 
             document
-                .getElementById("categories")
+                .getElementById("catalogue-level")
+                .classList.remove("hidden");
+
+            openCatalogueLevel();
+        }
+
+
+        /* -------------------------
+           DYNAMIC BACK
+        ------------------------- */
+
+        function goBackCatalogueLevel() {
+
+            if (currentPath.length > 0) {
+
+                currentPath.pop();
+
+                openCatalogueLevel();
+
+                return;
+            }
+
+
+            document
+                .getElementById("catalogue-level")
+                .classList.add("hidden");
+
+            document
+                .getElementById("seasons")
                 .classList.remove("hidden");
         }
-    
-    function showSeasonsFromDepartments() {
-
-        document
-            .getElementById("departments")
-            .classList.add("hidden");
-
-        document
-            .getElementById("seasons")
-            .classList.remove("hidden");
-    }
     
     </script>
 
