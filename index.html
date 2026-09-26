@@ -120,49 +120,6 @@
             </div>
 
         </section>
-
-        <!-- DEPARTMENTS -->
-
-        <section id="departments" class="hidden">
-
-            <button class="back-button"
-                    onclick="showSeasonsFromDepartments()">
-                ← Back
-            </button>
-
-            <div class="selection-header">
-                <p id="selected-department-path"></p>
-                <h2>Departments</h2>
-            </div>
-
-            <div id="department-list"
-                 class="year-list">
-            </div>
-
-        </section>
-        
-        <!-- CATEGORIES -->
-
-        <section id="categories" class="hidden">
-
-            <button class="back-button"
-                    onclick="showSeasons()">
-                ← Back
-            </button>
-
-            <div class="selection-header">
-
-                <p id="selected-season"></p>
-
-                <h2>Categories</h2>
-
-            </div>
-
-            <div id="category-list"
-                 class="year-list">
-            </div>
-
-        </section>
         
         <!-- DYNAMIC CATALOGUE LEVEL -->
 
@@ -189,7 +146,7 @@
         <section id="products" class="hidden">
 
             <button class="back-button"
-                    onclick="showCategories()">
+                onclick="backFromProducts()"
                 ← Back
             </button>
 
@@ -595,7 +552,22 @@
                 .getElementById("seasons")
                 .classList.remove("hidden");
         }
-    
+        /* -------------------------
+           BACK FROM PRODUCTS
+        ------------------------- */
+
+        function backFromProducts() {
+
+            document
+                .getElementById("products")
+                .classList.add("hidden");
+
+            document
+                .getElementById("catalogue-level")
+                .classList.remove("hidden");
+
+            openCatalogueLevel();
+        }
     </script>
 
 </body>
