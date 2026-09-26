@@ -1,0 +1,213 @@
+* {
+    box-sizing: border-box;
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", Arial, sans-serif;
+    background: #111111;
+    color: #eeeeee;
+}
+
+/* SPLASH SCREEN */
+
+#splash {
+    position: fixed;
+    inset: 0;
+    background: #111111;
+    color: #eeeeee;
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    z-index: 1000;
+
+    transition: opacity 0.6s ease;
+}
+
+#splash h1 {
+    margin: 0;
+    font-size: clamp(42px, 8vw, 90px);
+    font-weight: 700;
+    letter-spacing: 0.08em;
+}
+
+#splash.hide {
+    opacity: 0;
+    pointer-events: none;
+}
+
+/* MAIN CATALOGUE */
+
+#app {
+    min-height: 100vh;
+    padding: 40px;
+}
+
+.hidden {
+    display: none;
+}
+/* BRAND SCREEN */
+
+header {
+    text-align: center;
+    padding-top: 20px;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 30px;
+    letter-spacing: 0.08em;
+}
+
+header p {
+    margin-top: 6px;
+    font-size: 13px;
+    color: #777;
+}
+
+#brands {
+    margin-top: 70px;
+    text-align: center;
+}
+
+#brands h2 {
+    font-size: 18px;
+    font-weight: 500;
+    margin-bottom: 35px;
+}
+
+.brand-list {
+    display: flex;
+    gap: 22px;
+
+    overflow-x: auto;
+
+    padding: 20px calc(50vw - 130px) 35px;
+
+    scroll-snap-type: x mandatory;
+    scrollbar-width: none;
+}
+
+.brand-list::-webkit-scrollbar {
+    display: none;
+}
+
+.brand-card {
+    flex: 0 0 260px;
+    height: 320px;
+
+    border: 1px solid #e5e5e5;
+    border-radius: 22px;
+
+    background: #1c1c1e;
+    color: #eeeeee;
+    
+    font-size: 21px;
+    font-weight: 500;
+
+    cursor: pointer;
+
+    scroll-snap-align: center;
+
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.06);
+
+    transition:
+        transform 0.25s ease,
+        box-shadow 0.25s ease;
+}
+
+.brand-card:hover {
+    transform: translateY(-5px);
+
+    box-shadow:
+        0 14px 35px rgba(0, 0, 0, 0.10);
+}
+
+.brand-card:active {
+    transform: scale(0.98);
+}
+/* TEMPORARY DARK DEVELOPMENT MODE */
+
+html,
+body {
+    background: #111111;
+    color: #eeeeee;
+}
+
+#splash {
+    background: #111111;
+    color: #eeeeee;
+}
+
+.brand-card,
+.year-card {
+    background: #1c1c1e;
+    color: #eeeeee;
+    border-color: #333333;
+}
+
+header p,
+.selection-header p {
+    color: #aaaaaa;
+}
+/* PRODUCT GRID */
+
+#products {
+    margin-top: 50px;
+    text-align: center;
+}
+
+.product-list {
+    max-width: 1100px;
+    margin: 0 auto;
+
+    display: grid;
+    grid-template-columns:
+        repeat(auto-fill, minmax(220px, 1fr));
+
+    gap: 24px;
+}
+
+.product-card {
+    border: 1px solid #333333;
+    border-radius: 18px;
+
+    background: #1c1c1e;
+    color: #eeeeee;
+
+    overflow: hidden;
+    padding: 0;
+
+    text-align: left;
+    cursor: pointer;
+}
+
+.product-image-placeholder {
+    aspect-ratio: 1 / 1;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: #252527;
+    color: #777777;
+}
+
+.product-card-info {
+    padding: 18px;
+
+    display: flex;
+    flex-direction: column;
+
+    gap: 7px;
+}
+
+.product-card-info span {
+    color: #aaaaaa;
+    font-size: 14px;
+}

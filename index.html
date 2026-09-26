@@ -1,51 +1,450 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
     <title>ELİT Catalogue</title>
+
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-    <h1>ELİT</h1>
-    <h2>Catalogue</h2>
+    <!-- SPLASH -->
 
-    <div id="catalogue">
-        Loading catalogue...
+    <div id="splash">
+        <h1>ELİT</h1>
     </div>
 
+
+    <!-- MAIN APP -->
+
+    <main id="app" class="hidden">
+
+        <header>
+            <h1>ELİT</h1>
+            <p>Catalogue</p>
+        </header>
+
+
+        <!-- BRANDS -->
+
+        <section id="brands">
+
+            <h2>Brands</h2>
+
+            <div class="brand-list">
+
+                <button class="brand-card"
+                        onclick="openBrand('Pierre Cardin')">
+                    Pierre Cardin
+                </button>
+
+                <button class="brand-card">
+                    Benetton
+                </button>
+
+                <button class="brand-card">
+                    Ferre
+                </button>
+
+            </div>
+
+        </section>
+
+
+        <!-- YEARS -->
+
+        <section id="years" class="hidden">
+
+            <button class="back-button"
+                    onclick="showBrands()">
+                ← Back
+            </button>
+
+            <div class="selection-header">
+
+                <p id="selected-brand"></p>
+
+                <h2>Select Year</h2>
+
+            </div>
+
+            <div class="year-list">
+
+                <button class="year-card"
+                    onclick="openYear(2026)">
+                    2026
+                </button>
+
+                <button class="year-card">
+                    2025
+                </button>
+
+            </div>
+
+        </section>
+        
+        <!-- SEASONS -->
+
+        <section id="seasons" class="hidden">
+
+            <button class="back-button"
+                    onclick="showYears()">
+                ← Back
+            </button>
+
+            <div class="selection-header">
+
+                <p id="selected-year"></p>
+
+                <h2>Select Season</h2>
+
+            </div>
+
+            <div class="year-list">
+
+                <button class="year-card"
+                        onclick="openSeason('K')">
+                    Winter
+                </button>
+
+                <button class="year-card"
+                        onclick="openSeason('Y')">
+                    Summer
+                </button>
+            </div>
+
+        </section>
+
+        <!-- CATEGORIES -->
+
+        <section id="categories" class="hidden">
+
+            <button class="back-button"
+                    onclick="showSeasons()">
+                ← Back
+            </button>
+
+            <div class="selection-header">
+
+                <p id="selected-season"></p>
+
+                <h2>Categories</h2>
+
+            </div>
+
+            <div id="category-list"
+                 class="year-list">
+            </div>
+
+        </section>
+        
+        <!-- PRODUCTS -->
+
+        <section id="products" class="hidden">
+
+            <button class="back-button"
+                    onclick="showCategories()">
+                ← Back
+            </button>
+
+            <div class="selection-header">
+
+                <p id="selected-category"></p>
+
+                <h2>Products</h2>
+
+            </div>
+
+            <div id="product-list"
+                 class="product-list">
+            </div>
+
+        </section>
+        
+    </main>
+
+
     <script>
-        fetch("products.json")
-            .then(response => response.json())
-            .then(data => {
 
-                const catalogue = document.getElementById("catalogue");
-                catalogue.innerHTML = "";
+        const splash =
+            document.getElementById("splash");
 
-                data.products.forEach(product => {
+        const app =
+            document.getElementById("app");
+            
+        
 
-                    catalogue.innerHTML += `
-                        <hr>
-                        <h2>${product.brand}</h2>
-                        <h3>${product.code}</h3>
 
-                        <p>${product.type}</p>
-                        <p>${product.category}</p>
-                        <p>Year: ${product.year}</p>
-                        <p>Season: ${product.season}</p>
-                        <p>Made in ${product.madeIn}</p>
-                        <p>Vegan: ${product.vegan ? "Yes" : "No"}</p>
-                        <p>Colors: ${product.colors.join(", ")}</p>
-                    `;
-                });
-            })
-            .catch(error => {
-                document.getElementById("catalogue").innerHTML =
-                    "Catalogue couldn't be loaded.";
-                console.error(error);
+        /* SPLASH */
+
+        setTimeout(() => {
+
+            splash.classList.add("hide");
+
+            app.classList.remove("hidden");
+
+            setTimeout(() => {
+
+                splash.remove();
+
+            }, 600);
+
+        }, 1500);
+
+
+        /* NAVIGATION */
+
+        function openBrand(brand) {
+
+            document
+                .getElementById("brands")
+                .classList.add("hidden");
+
+            document
+                .getElementById("years")
+                .classList.remove("hidden");
+
+            document
+                .getElementById("selected-brand")
+                .textContent = brand;
+        }
+
+
+        function showBrands() {
+
+            document
+                .getElementById("years")
+                .classList.add("hidden");
+
+            document
+                .getElementById("brands")
+                .classList.remove("hidden");
+        }
+        
+        function openYear(year) {
+
+            document
+                .getElementById("years")
+                .classList.add("hidden");
+
+            document
+                .getElementById("seasons")
+                .classList.remove("hidden");
+
+            document
+                .getElementById("selected-year")
+                .textContent =
+                document.getElementById("selected-brand").textContent
+                + " • " + year;
+        }
+
+
+        function showYears() {
+
+            document
+                .getElementById("seasons")
+                .classList.add("hidden");
+
+            document
+                .getElementById("years")
+                .classList.remove("hidden");
+        }
+        async function openSeason(season) {
+
+            document
+                .getElementById("seasons")
+                .classList.add("hidden");
+
+            document
+                .getElementById("categories")
+                .classList.remove("hidden");
+
+            const seasonName =
+                season === "K" ? "Winter" : "Summer";
+
+            document
+                .getElementById("selected-season")
+                .textContent =
+                document.getElementById("selected-year").textContent
+                + " • " + seasonName;
+
+
+            const response =
+                await fetch("products.json");
+
+            const data =
+                await response.json();
+
+
+            const selectedBrand =
+                document
+                    .getElementById("selected-brand")
+                    .textContent;
+
+            const selectedYear =
+                Number(
+                    document
+                        .getElementById("selected-year")
+                        .textContent
+                        .split(" • ")
+                        .pop()
+                );
+
+
+            const matchingProducts =
+                data.products.filter(product =>
+                    product.brand === selectedBrand &&
+                    product.year === selectedYear &&
+                    product.season === season
+                );
+
+
+            const categories =
+                [...new Set(
+                    matchingProducts.map(
+                        product => product.category
+                    )
+                )];
+
+
+            const categoryList =
+                document.getElementById("category-list");
+
+            categoryList.innerHTML = "";
+
+
+            categories.forEach(category => {
+
+                const button =
+                    document.createElement("button");
+
+                button.className = "year-card";
+
+                button.textContent = category;
+
+                button.onclick = () => openCategory(category);
+
+                categoryList.appendChild(button);
             });
+        }
+
+
+        function showSeasons() {
+
+            document
+                .getElementById("categories")
+                .classList.add("hidden");
+
+            document
+                .getElementById("seasons")
+                .classList.remove("hidden");
+        }
+        async function openCategory(category) {
+
+            document
+                .getElementById("categories")
+                .classList.add("hidden");
+
+            document
+                .getElementById("products")
+                .classList.remove("hidden");
+
+
+            document
+                .getElementById("selected-category")
+                .textContent = category;
+
+
+            const response =
+                await fetch("products.json");
+
+            const data =
+                await response.json();
+
+
+            const selectedBrand =
+                document
+                    .getElementById("selected-brand")
+                    .textContent;
+
+
+            const selectedYear =
+                Number(
+                    document
+                        .getElementById("selected-year")
+                        .textContent
+                        .split(" • ")
+                        .pop()
+                );
+
+
+            const selectedSeasonText =
+                document
+                    .getElementById("selected-season")
+                    .textContent;
+
+            const selectedSeason =
+                selectedSeasonText.includes("Winter")
+                    ? "K"
+                    : "Y";
+
+
+            const matchingProducts =
+                data.products.filter(product =>
+                    product.brand === selectedBrand &&
+                    product.year === selectedYear &&
+                    product.season === selectedSeason &&
+                    product.category === category
+                );
+
+
+            const productList =
+                document.getElementById("product-list");
+
+            productList.innerHTML = "";
+
+
+            matchingProducts.forEach(product => {
+
+                const card =
+                    document.createElement("button");
+
+                card.className = "product-card";
+
+                card.innerHTML = `
+                    <div class="product-image-placeholder">
+                        Photo
+                    </div>
+
+                    <div class="product-card-info">
+                        <strong>${product.code}</strong>
+                        <span>${product.type}</span>
+                    </div>
+                `;
+
+                productList.appendChild(card);
+            });
+        }
+
+
+        function showCategories() {
+
+            document
+                .getElementById("products")
+                .classList.add("hidden");
+
+            document
+                .getElementById("categories")
+                .classList.remove("hidden");
+        }
     </script>
 
 </body>
+
 </html>
