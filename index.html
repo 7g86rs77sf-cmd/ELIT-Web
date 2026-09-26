@@ -121,6 +121,26 @@
 
         </section>
 
+        <!-- DEPARTMENTS -->
+
+        <section id="departments" class="hidden">
+
+            <button class="back-button"
+                    onclick="showSeasonsFromDepartments()">
+                ← Back
+            </button>
+
+            <div class="selection-header">
+                <p id="selected-department-path"></p>
+                <h2>Departments</h2>
+            </div>
+
+            <div id="department-list"
+                 class="year-list">
+            </div>
+
+        </section>
+        
         <!-- CATEGORIES -->
 
         <section id="categories" class="hidden">
@@ -262,25 +282,23 @@
                 .classList.add("hidden");
 
             document
-                .getElementById("categories")
+                .getElementById("departments")
                 .classList.remove("hidden");
 
             const seasonName =
                 season === "K" ? "Winter" : "Summer";
 
             document
-                .getElementById("selected-season")
+                .getElementById("selected-department-path")
                 .textContent =
                 document.getElementById("selected-year").textContent
                 + " • " + seasonName;
-
 
             const response =
                 await fetch("catalogue-generated.json");
 
             const data =
                 await response.json();
-
 
             const selectedBrand =
                 document
@@ -296,14 +314,86 @@
                         .pop()
                 );
 
+            const selectedSeason =
+                season === "K" ? "WINTER" : "SUMMER";
 
-                const matchingProducts =
-                    data.products.filter(product =>
-                        product.brand === selectedBrand &&
-                        Number(product.year) === selectedYear &&
-                        product.season === (season === "K" ? "WINTER" : "SUMMER")
+            const matchingProducts =
+                data.products.filter(product =>
+                    product.brand === selectedBrand &&
+                    Number(product.year) === selectedYear &&
+                    product.season === selectedSeason
+                );
+
+            const departments =
+                [...new Set(
+                    matchingProducts.map(
+                        product => product.department
+                    )
+                )];
+
+            const departmentList =
+                document.getElementById("department-list");
+
+            departmentList.innerHTML = "";
+
+            departments.forEach(department => {
+
+                const button =
+                    document.createElement("button");
+
+                button.className = "year-card";
+                button.textContent = department;
+
+                button.onclick =
+                    () => openDepartment(
+                        department,
+                        selectedSeason
                     );
 
+                departmentList.appendChild(button);
+            });
+        }
+        async function openDepartment(department, season) {
+
+            document
+                .getElementById("departments")
+                .classList.add("hidden");
+
+            document
+                .getElementById("categories")
+                .classList.remove("hidden");
+
+            document
+                .getElementById("selected-season")
+                .textContent = department;
+
+            const response =
+                await fetch("catalogue-generated.json");
+
+            const data =
+                await response.json();
+
+            const selectedBrand =
+                document
+                    .getElementById("selected-brand")
+                    .textContent;
+
+            const selectedYear =
+                Number(
+                    document
+                        .getElementById("selected-year")
+                        .textContent
+                        .split(" • ")
+                        .pop()
+                );
+
+            const matchingProducts =
+                data.products.filter(product =>
+                    product.brand === selectedBrand &&
+                    Number(product.year) === selectedYear &&
+                    product.season === season &&
+                    product.department === department
+                );
 
             const categories =
                 [...new Set(
@@ -312,12 +402,10 @@
                     )
                 )];
 
-
             const categoryList =
                 document.getElementById("category-list");
 
             categoryList.innerHTML = "";
-
 
             categories.forEach(category => {
 
@@ -325,15 +413,18 @@
                     document.createElement("button");
 
                 button.className = "year-card";
-
                 button.textContent = category;
 
-                button.onclick = () => openCategory(category);
+                button.onclick =
+                    () => openCategory(
+                        category,
+                        department,
+                        season
+                    );
 
                 categoryList.appendChild(button);
             });
         }
-
 
         function showSeasons() {
 
@@ -452,6 +543,18 @@
                 .getElementById("categories")
                 .classList.remove("hidden");
         }
+    
+    function showSeasonsFromDepartments() {
+
+        document
+            .getElementById("departments")
+            .classList.add("hidden");
+
+        document
+            .getElementById("seasons")
+            .classList.remove("hidden");
+    }
+    
     </script>
 
 </body>
