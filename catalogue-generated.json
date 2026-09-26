@@ -5,8 +5,10 @@
       "brand": "Pierre Cardin",
       "year": "2025",
       "season": "WINTER",
-      "department": "WOMAN",
-      "category": "BAGS",
+      "path": [
+        "WOMAN",
+        "BAGS"
+      ],
       "colors": [
         {
           "code": "GCM",
@@ -76,8 +78,10 @@
       "brand": "Pierre Cardin",
       "year": "2026",
       "season": "WINTER",
-      "department": "WOMEN",
-      "category": "BAGS",
+      "path": [
+        "WOMEN",
+        "BAGS"
+      ],
       "colors": [
         {
           "code": "BJ",
@@ -161,8 +165,10 @@
       "brand": "Pierre Cardin",
       "year": "2026",
       "season": "WINTER",
-      "department": "WOMEN",
-      "category": "BAGS",
+      "path": [
+        "WOMEN",
+        "BAGS"
+      ],
       "colors": [
         {
           "code": "A",
@@ -246,8 +252,10 @@
       "brand": "Pierre Cardin",
       "year": "2026",
       "season": "WINTER",
-      "department": "WOMEN",
-      "category": "BAGS",
+      "path": [
+        "WOMEN",
+        "BAGS"
+      ],
       "colors": [
         {
           "code": "A",
@@ -331,8 +339,10 @@
       "brand": "Pierre Cardin",
       "year": "2026",
       "season": "WINTER",
-      "department": "WOMEN",
-      "category": "BAGS",
+      "path": [
+        "WOMEN",
+        "BAGS"
+      ],
       "colors": [
         {
           "code": "BJ",
@@ -382,8 +392,10 @@
       "brand": "Pierre Cardin",
       "year": "2026",
       "season": "WINTER",
-      "department": "WOMEN",
-      "category": "BAGS",
+      "path": [
+        "WOMEN",
+        "BAGS"
+      ],
       "colors": [
         {
           "code": "A",
@@ -451,8 +463,10 @@
       "brand": "Pierre Cardin",
       "year": "2026",
       "season": "WINTER",
-      "department": "WOMEN",
-      "category": "BAGS",
+      "path": [
+        "WOMEN",
+        "BAGS"
+      ],
       "colors": [
         {
           "code": "A",
@@ -536,8 +550,10 @@
       "brand": "Pierre Cardin",
       "year": "2026",
       "season": "WINTER",
-      "department": "WOMEN",
-      "category": "WALLETS",
+      "path": [
+        "WOMEN",
+        "WALLETS"
+      ],
       "colors": [
         {
           "code": "A",
