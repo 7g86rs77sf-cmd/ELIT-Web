@@ -164,6 +164,30 @@
 
         </section>
         
+        <!-- PRODUCT DETAIL -->
+
+        <section id="product-detail" class="hidden">
+
+            <div class="back-button"
+                 onclick="closeProduct()">
+                ← Back
+            </div>
+
+            <div class="selection-header">
+                <p>Product</p>
+                <h2 id="product-detail-code"></h2>
+            </div>
+
+            <div id="product-colors"
+                 class="year-list">
+            </div>
+
+            <div id="product-photos"
+                 class="product-list">
+            </div>
+
+        </section>
+        
     </main>
 
 
@@ -504,7 +528,8 @@
                     </div>
                 `;
 
-
+                card.onclick = () => openProduct(product);
+                
                 productList.appendChild(card);
             });
         }
@@ -572,6 +597,55 @@
 
             openCatalogueLevel();
         }
+        
+        function openProduct(product) {
+
+            document
+                .getElementById("products")
+                .classList.add("hidden");
+
+            document
+                .getElementById("product-detail")
+                .classList.remove("hidden");
+
+            document
+                .getElementById("product-detail-code")
+                .textContent = product.code;
+
+
+            const colorList =
+                document.getElementById("product-colors");
+
+            colorList.innerHTML = "";
+
+
+            product.colors.forEach(color => {
+
+                const button =
+                    document.createElement("button");
+
+                button.className = "year-card";
+
+                button.textContent =
+                    color.code || color.color || "Color";
+
+                colorList.appendChild(button);
+
+            });
+
+        }
+        function closeProduct() {
+
+            document
+                .getElementById("product-detail")
+                .classList.add("hidden");
+
+            document
+                .getElementById("products")
+                .classList.remove("hidden");
+
+        }
+        
     </script>
 
 </body>
