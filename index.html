@@ -562,6 +562,10 @@
                 .getElementById("products")
                 .classList.add("hidden");
 
+            if (currentPath.length > 0) {
+                currentPath.pop();
+            }
+
             document
                 .getElementById("catalogue-level")
                 .classList.remove("hidden");
