@@ -651,18 +651,21 @@
 
             photoList.innerHTML = "";
 
-            const photos =
-                color.photos || color.images || [];
+            const photos = color.photos || [];
 
             photos.forEach(photo => {
 
                 const img =
                     document.createElement("img");
 
-                img.src = photo;
+                img.src =
+                    "images/" +
+                    color.folder +
+                    "/" +
+                    photo;
 
                 img.alt =
-                    color.code || color.color || "Product";
+                    color.code || "Product";
 
                 photoList.appendChild(img);
 
