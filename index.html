@@ -619,7 +619,7 @@
             colorList.innerHTML = "";
 
 
-            product.colors.forEach(color => {
+            product.colors.forEach((color, index) => {
 
                 const button =
                     document.createElement("button");
@@ -629,11 +629,47 @@
                 button.textContent =
                     color.code || color.color || "Color";
 
+                button.onclick = () => {
+                    showProductColor(color);
+                };
+
                 colorList.appendChild(button);
+
+                // Automatically show the first color
+                if (index === 0) {
+                    showProductColor(color);
+                }
+
+            });
+            
+        }
+        
+        function showProductColor(color) {
+
+            const photoList =
+                document.getElementById("product-photos");
+
+            photoList.innerHTML = "";
+
+            const photos =
+                color.photos || color.images || [];
+
+            photos.forEach(photo => {
+
+                const img =
+                    document.createElement("img");
+
+                img.src = photo;
+
+                img.alt =
+                    color.code || color.color || "Product";
+
+                photoList.appendChild(img);
 
             });
 
         }
+        
         function closeProduct() {
 
             document
