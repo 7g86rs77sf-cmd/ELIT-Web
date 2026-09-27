@@ -651,26 +651,23 @@
 
             photoList.innerHTML = "";
 
-            const photos = color.photos || [];
-
-            photos.forEach(photo => {
+            color.photos.forEach(photoName => {
 
                 const img =
                     document.createElement("img");
 
                 img.src =
-                    "images/" +
-                    color.folder +
-                    "/" +
-                    photo;
+                    "images/"
+                    + color.folder
+                    + "/"
+                    + photoName;
 
                 img.alt =
-                    color.code || "Product";
+                    color.code || "Product photo";
 
                 photoList.appendChild(img);
 
             });
-
         }
         
         function closeProduct() {
